@@ -32,7 +32,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-blabla description
+This hackathon project involves developing a graphical interface for creating a VPN account. The interface allows users to easily set up a VPN connection, specifying IP whitelist configurations to connect to an LDAP server and access designated resources.
 
 Specifications:
 
