@@ -130,7 +130,7 @@ Distributed under the MIT License. See [LICENSE.txt]() for more information.
 
 CARDOSO Esteban - [esteban.cardoso@ynov.com] <br>
 RAYNAUD Adrien - [adrien.raynaud@ynov.com] <br>
-KAUFFMANN Keillan - [keillan.kauffmann@ynov.com] <br>
+KAUFFMANN Kellian - [kellian.kauffmann@ynov.com] <br>
 
 
 
