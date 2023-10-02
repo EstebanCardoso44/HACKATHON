@@ -1,8 +1,8 @@
 # HACKATHON
 <div id="top"></div>
 
-<!-- HabitEnforcer  -->
-## HabitEnforcer 
+<!-- HACKATHON  -->
+## HACKATHON
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -32,14 +32,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This project involves setting up an habit tracker inspired by the Habitica site.
+blabla description
 
 Specifications:
 
--Ability to create an account and log in
--Be able to compose a group of friends according to their identifier
--Add habits to follow (daily or weekly)
--Checking or not if the habits will influence on a group score
+-Website to create Vpn access account
+-Secured Vpn Tunnel
+-Use of LDAP protocol 
+-Ressources access from whithlist IP only
 
 
 
@@ -49,8 +49,8 @@ Specifications:
 
 ### Built With
 * [PHP](https://www.php.net/)
-* [MAMP](https://www.mamp.info/en/downloads/)
-* [SQL](https://sql.sh/)
+* [XAMPP](https://www.apachefriends.org/fr/index.html)
+* [MySQL](https://www.mysql.com/fr/)
 * [HTML5](https://html.spec.whatwg.org/multipage/)
 * [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
@@ -63,7 +63,7 @@ Specifications:
 
 ### Prerequisites
 
-You need to install PHP and MAMP :
+You need to install PHP and XAMPP :
 <br>
 https://www.php.net/manual/fr/install.php
 https://www.mamp.info/en/downloads/
@@ -108,11 +108,11 @@ https://www.mamp.info/en/downloads/
 
 - [x] DataBase
 - [x] Authentication
-- [x] Task Creation 
-- [x] Group 
+- [x] Session management
+- [x] SSL Certificate
 - [x] Full Responsive Website
-- [x] TaskValidation
-- [x] Score Update
+- [x] VPN
+- [x] LDAP Auth
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -129,12 +129,12 @@ Distributed under the MIT License. See [LICENSE.txt]() for more information.
 ## Contact
 
 CARDOSO Esteban - [esteban.cardoso@ynov.com] <br>
-Chevalier Maxime - [maxime.chevalier@ynov.com] <br>
-TERENTJEW Vincent - [vincent.terentjew@ynov.com] <br>
+RAYNAUD Adrien - [adrien.raynaud@ynov.com] <br>
+KAUFFMANN Keillan - [keillan.kauffmann@ynov.com] <br>
 
 
 
-Project Link: [https://github.com/VincentTjw/HabitEnforcer](https://github.com/VincentTjw/HabitEnforcer)
+Project Link: [https://github.com/EstebanCardoso44/HACKATHON.git](https://github.com/EstebanCardoso44/HACKATHON.git)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
