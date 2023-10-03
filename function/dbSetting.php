@@ -63,7 +63,7 @@ class DBHandler
         if ($con == false) {
             die("ERROR : couldn't connect properly to database : " . mysqli_connect_error());
         }
-        $sql = "SELECT verif FROM " . $table . " WHERE Name = '" . $name . "'";
+        $sql = "SELECT verif FROM " . $table . " WHERE name = '" . $name . "'";
         if ($request = $con->prepare($sql)) {
             $request->execute();
             $resultQuerry = $request->get_result();
@@ -97,7 +97,7 @@ class DBHandler
             die("ERROR : couldn't connect properly to database : " . mysqli_connect_error());
         }
         $date = date("Y-m-d H:i:s", time());
-        $sql = "SELECT password FROM " . $table . " WHERE Name = '" . $name . "'";
+        $sql = "SELECT password FROM " . $table . " WHERE name = '" . $name . "'";
         if ($request = $con->prepare($sql)) {
             $request->execute();
             $resultQuerry = $request->get_result();
@@ -114,7 +114,7 @@ class DBHandler
         if ($con == false) {
             die("ERROR : couldn't connect properly to database : " . mysqli_connect_error());
         }
-        $sql = "SELECT ID FROM " . $table . " WHERE Name = '" . $name . "'";
+        $sql = "SELECT ID FROM " . $table . " WHERE name = '" . $name . "'";
         if ($request = $con->prepare($sql)) {
             $request->execute();
             $resultQuerry = $request->get_result();
@@ -122,7 +122,7 @@ class DBHandler
             die("Can't prepare the sql request properly : " . $sql . " " . mysqli_error($con));
         }
         mysqli_close($con);
-        return $resultQuerry->fetch_assoc()['ID'];
+        return $resultQuerry->fetch_assoc()['id'];
     }
     
     public function getEmailwithName(string $table, string $name)
@@ -131,7 +131,7 @@ class DBHandler
         if ($con == false) {
             die("ERROR : couldn't connect properly to database : " . mysqli_connect_error());
         }
-        $sql = "SELECT Email FROM " . $table . " WHERE Name = '" . $name . "'";
+        $sql = "SELECT Email FROM " . $table . " WHERE name = '" . $name . "'";
         if ($request = $con->prepare($sql)) {
             $request->execute();
             $resultQuerry = $request->get_result();
@@ -139,6 +139,6 @@ class DBHandler
             die("Can't prepare the sql request properly : " . $sql . " " . mysqli_error($con));
         }
         mysqli_close($con);
-        return $resultQuerry->fetch_assoc()['Email'];
+        return $resultQuerry->fetch_assoc()['email'];
     }
 }

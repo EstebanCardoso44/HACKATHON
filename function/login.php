@@ -4,7 +4,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   $re = new Login(); // Create a new Login object
   $re->login(); // Call the login function
 }else {
-  header('Location: ../php_template/loginhtml.php');
+  header('Location: ../php_template/loginHtml.php');
   exit();
 }
 
@@ -33,17 +33,17 @@ Class Login
               exit();
             } else {
               mysqli_close($this->con); // Close the connection
-              header('Location:../php_template/loginhtml.php?erreur=1'); // Username or password incorrect
+              header('Location:../php_template/loginHtml.php?erreur=1'); // Username or password incorrect
               exit();
             }
           } else {
             mysqli_close($this->con); // Close the connection
-            header('Location: ../php_template/loginhtml.php?erreur=2'); // One or more fields are empty
+            header('Location: ../php_template/loginHtml.php?erreur=2'); // One or more fields are empty
             exit();
           }
         } else {
           mysqli_close($this->con); // Close the connection
-          header('Location: ../php_template/loginhtml.php?erreur=3'); // The user is not confirmed
+          header('Location: ../php_template/loginHtml.php?erreur=3'); // The user is not confirmed
           exit();
       }
     }

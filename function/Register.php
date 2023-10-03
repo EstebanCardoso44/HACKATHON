@@ -43,31 +43,31 @@ class Users
 		);
 		$this->db->getFromDbByParam("users", "name", $this->name); 
 		if ($this->db->getFromDbByParam("users", "name", $this->name) != null) {// Check if the username is already taken
-			header('Location: ../php_template/registerhtml.php?erreur=4');
+			header('Location: ../php_template/RegisterHtml.php?erreur=4');
 			exit();
 		} else {
 			$this->db->insert($data, 'users'); // Insert the data into the database
 			//SendMail($this->email, $this->key, $this->name); // Call the SendMail function
-			//header('Location: ../php_template/loginhtml.php');
+			header('Location: ../php_template/loginHtml.php');
 		}
 	}
 }
 function VerifyEnteredData($username, $password, $email)
 {
 	if (!isset($username, $password, $email)) { // Check if the data is set
-		header('Location: /..php_template/registerhtml.php?erreur=1');
+		header('Location: /..php_template/RegisterHtml.php?erreur=1');
 		exit();
 	}
 	if (empty($username) || empty($password) || empty($email)) { // Check if the data is empty
-		header('Location: ../php_template/registerhtml.php?erreur=1');
+		header('Location: ../php_template/RegisterHtml.php?erreur=1');
 		exit();
 	}
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { // Check if the email is valid
-		header('Location: ../php_template/registerhtml.php?erreur=2');
+		header('Location: ../php_template/RegisterHtml.php?erreur=2');
 		exit();
 	}
 	if (preg_match('/[A-Za-z0-9]+/', $username) == 0) { // Check if the username is valid
-		header('Location: ../php_template/registerhtml.php?erreur=3');
+		header('Location: ../php_template/RegisterHtml.php?erreur=3');
 		exit();
 	}
 }
@@ -78,7 +78,7 @@ function VerifyEnteredData($username, $password, $email)
 			$header.='Content-Type:text/html; charset="uft-8"'."\n";
 			$header.='Content-Transfer-Encoding: 8bit';
         	$subject = "mail de confirmation";
-        	$message ="http://localhost/HabitEnforcer/function/confirm.php?username=" . urlencode($username) . "&key=" . $key;
+        	$message ="http://localhost/HACKATHON/function/confirm.php?username=" . urlencode($username) . "&key=" . $key;
         	mail($to,$subject,$message,$header);
 		}
 	}
