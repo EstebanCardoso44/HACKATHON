@@ -45,114 +45,7 @@ body {
     filter: hue-rotate(1800deg);
   }
 }
-task-menu input {
-  display: inline-block;
-  outline: 0;
-  border: 0;
-  cursor: pointer;
-  will-change: box-shadow, transform;
-  background: radial-gradient(100% 100% at 100% 0%, #432874 0%, #7c4fd1 100%);
-  box-shadow: 0px 2px 4px rgb(45 35 66 / 40%),
-    0px 7px 13px -3px rgb(45 35 66 / 30%),
-    inset 0px -3px 0px rgb(58 65 111 / 50%);
-  border-radius: 6px;
-  color: white;
-  height: 35px;
-  font-size: 18px;
-  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
-}
-task-menu input:hover {
-  box-shadow: 0px 4px 8px rgb(45 35 66 / 40%),
-    0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #7c4fd1;
-  transform: translateY(-2px);
-}
-task-menu input:active {
-  box-shadow: inset 0px 3px 7px #7c4fd1;
-  transform: translateY(2px);
-}
 
-task-creator #count-down-createTask {
-  color: #da70d6;
-}
-
-task-form select {
-  height: max-content;
-  border-style: none;
-  background: none;
-}
-
-task-filters {
-  margin-bottom: 1%;
-  width: 60%;
-}
-
-task-filters input[type="text"]{
-  width: 100%;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  background: none;
-  border-color: #432874;
-}
-
-task-form {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-task-form input[type="text"] {
-  width: auto;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  background: none;
-  border-color: #432874;
-  color: black;
-}
-
-task-form .task-form-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-}
-
-.task-card {
-  border-style: solid;
-  border-color: black;
-  min-width: 20%;
-  max-width: 25%;
-}
-
-task-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-card-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-task-menu {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-bottom: 5%;
-}
-task-menu-up {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 2%;
-}
 
 header {
   width: 100%;
@@ -331,44 +224,6 @@ content-left-container task-display task-card {
   margin-top: 10%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-task-card task-card-header {
-  display: flex;
-  flex-direction: row;
-  margin-left: 5%;
-}
-
-task-card task-card-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-task-card task-card-body input {
-  display: inline-block;
-  outline: 0;
-  border: 0;
-  cursor: pointer;
-  will-change: box-shadow, transform;
-  background: radial-gradient(100% 100% at 100% 0%, #432874 0%, #7c4fd1 100%);
-  box-shadow: 0px 2px 4px rgb(45 35 66 / 40%),
-    0px 7px 13px -3px rgb(45 35 66 / 30%),
-    inset 0px -3px 0px rgb(58 65 111 / 50%);
-  border-radius: 6px;
-  color: white;
-  height: 35px;
-  font-size: 18px;
-  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
-}
-task-card task-card-body input:hover {
-  box-shadow: 0px 4px 8px rgb(45 35 66 / 40%),
-    0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #7c4fd1;
-  transform: translateY(-2px);
-}
-task-card task-card-body input:active {
-  box-shadow: inset 0px 3px 7px #7c4fd1;
-  transform: translateY(2px);
-}
 
 right-container {
   display: flex;
@@ -380,30 +235,4 @@ right-container form {
   flex-direction: column;
 }
 
-.GroupManager {
-  margin-top: 22%;
-  width: 35%;
-  height: fit-content;
-  text-align: center;
-  border-style: solid;
-  border-radius: 10px;
-  border-color: #432874;
-}
-
-.group-user {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#chat {
-  position: relative;
-  left: 0;
-  top: 0;
-}
-#paul {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
 
