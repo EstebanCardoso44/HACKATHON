@@ -90,4 +90,55 @@ class DBHandler
         return $data;
     }
 
+    public function getPasswordWithName(string $table, string $name)
+    {
+        $con = $this->connect();
+        if ($con == false) {
+            die("ERROR : couldn't connect properly to database : " . mysqli_connect_error());
+        }
+        $date = date("Y-m-d H:i:s", time());
+        $sql = "SELECT password FROM " . $table . " WHERE Name = '" . $name . "'";
+        if ($request = $con->prepare($sql)) {
+            $request->execute();
+            $resultQuerry = $request->get_result();
+        } else {
+            die("Can't prepare the sql request properly : " . $sql . " " . mysqli_error($con));
+        }
+        mysqli_close($con);
+        return $resultQuerry->fetch_assoc()['password'];
+    }
+    
+    public function getIDwithName(string $table, string $name)
+    {
+        $con = $this->connect();
+        if ($con == false) {
+            die("ERROR : couldn't connect properly to database : " . mysqli_connect_error());
+        }
+        $sql = "SELECT ID FROM " . $table . " WHERE Name = '" . $name . "'";
+        if ($request = $con->prepare($sql)) {
+            $request->execute();
+            $resultQuerry = $request->get_result();
+        } else {
+            die("Can't prepare the sql request properly : " . $sql . " " . mysqli_error($con));
+        }
+        mysqli_close($con);
+        return $resultQuerry->fetch_assoc()['ID'];
+    }
+    
+    public function getEmailwithName(string $table, string $name)
+    {
+        $con = $this->connect();
+        if ($con == false) {
+            die("ERROR : couldn't connect properly to database : " . mysqli_connect_error());
+        }
+        $sql = "SELECT Email FROM " . $table . " WHERE Name = '" . $name . "'";
+        if ($request = $con->prepare($sql)) {
+            $request->execute();
+            $resultQuerry = $request->get_result();
+        } else {
+            die("Can't prepare the sql request properly : " . $sql . " " . mysqli_error($con));
+        }
+        mysqli_close($con);
+        return $resultQuerry->fetch_assoc()['Email'];
+    }
 }
