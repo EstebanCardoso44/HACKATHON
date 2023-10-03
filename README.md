@@ -32,7 +32,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This hackathon project involves developing a graphical interface for creating a VPN account. The interface allows users to easily set up a VPN connection, specifying IP whitelist configurations to connect and access designated resources.
+This hackathon project involves developing a graphical interface to create VPN accounts. The interface allows users to easily set up a VPN connection, specifying IP whitelist configurations to connect and access designated resources.
 
 
 
