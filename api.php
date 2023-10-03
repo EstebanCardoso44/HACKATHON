@@ -10,10 +10,11 @@ if($result) {
     while($row = mysqli_fetch_assoc($result)){
     $response[$i]['id'] = $row['id'];
     $response[$i]['Name'] = $row['Name'];
-    $response[$i]['Username'] = $row['Username'];
     $response[$i]['Email'] = $row['Email'];
+    $response[$i]['confirmkey'] = $row['confirmkey'];
+    $response[$i]['password'] = $row['password'];
     $i++;}
 }
 echo json_encode($response, JSON_PRETTY_PRINT);
 }
-?>
+?>      
