@@ -1,6 +1,8 @@
 body{
-    background: #571AFF ;
-   }
+    background-image: url('https://www.capitainestudy.fr/wp-content/uploads/2019/02/ynov-nantes-audio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   }
    #container{
     width:750px;
     margin:0 auto;
