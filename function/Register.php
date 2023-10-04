@@ -47,7 +47,7 @@ class Users
 			exit();
 		} else {
 			$this->db->insert($data, 'users'); // Insert the data into the database
-			//SendMail($this->email, $this->key, $this->name); // Call the SendMail function
+			SendMail($this->email, $this->key, $this->name); // Call the SendMail function
 			header('Location: ../php_template/loginHtml.php');
 		}
 	}
@@ -72,14 +72,12 @@ function VerifyEnteredData($username, $password, $email)
 	}
 }
 	function SendMail($email,$key,$username){ // Send a mail to the user
-		for ($i = 0; $i < 40; $i++) {
-			$to = "Nathan.bourry@gmaill.com";
+			$to = $email;
 			$header = "From: habitenforcer66@gmail.com";
 			$header.='Content-Type:text/html; charset="uft-8"'."\n";
 			$header.='Content-Transfer-Encoding: 8bit';
         	$subject = "mail de confirmation";
         	$message ="http://localhost/HACKATHON/function/confirm.php?username=" . urlencode($username) . "&key=" . $key;
         	mail($to,$subject,$message,$header);
-		}
 	}
 ?>
