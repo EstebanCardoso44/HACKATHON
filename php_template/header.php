@@ -35,10 +35,10 @@
              </user>";
                 } else {
                     echo "
-                <a href=\"http://localhost/HACKATHON/php_template/registerhtml.php\">
+                <a href=\"http://localhost/HACKATHON/php_template/RegisterHtml.php\">
                 <input type=\"button\" value=\"Sign up\">
                 </a>
-                <a href=\"http://localhost/HACKATHONr/php_template/loginhtml.php\">
+                <a href=\"http://localhost/HACKATHON/php_template/loginHtml.php\">
                 <input type=\"button\" value=\"Login\">
                 </a>";
                 } ?>
