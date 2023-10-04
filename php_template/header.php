@@ -12,7 +12,7 @@
         </left>
         <middle>
             <content>
-                <a href="http://localhost/HACKATHON/php_template/home.php">
+                <a href="../HACKATHON/php_template/home.php">
                     <img src="https://cdn-icons-png.flaticon.com/512/4685/4685215.png">
                 </a>
             </content>
@@ -20,25 +20,17 @@
         <right>
             <content>
                 <?php if (isset($_SESSION["username"])) {
-                if (!empty($_SESSION["avatar"])|| isset($_SESSION["avatar"])) {
-             $image = "../Avatars/".$_SESSION["avatar"];
-                } else {
-                $image = "../Avatars/default.png";
-                }
              echo "<user>
              <a href=\"../function/logout.php\">
              <img src=\"https://cdn-icons-png.flaticon.com/512/992/992680.png\">
              </a>
-             <a href=\"../php_template/editingProfile.php\">
-             <img src=\"$image\">
-             </a>
              </user>";
                 } else {
                     echo "
-                <a href=\"http://localhost/HACKATHON/php_template/RegisterHtml.php\">
+                <a href=\"../HACKATHON/php_template/RegisterHtml.php\">
                 <input type=\"button\" value=\"Sign up\">
                 </a>
-                <a href=\"http://localhost/HACKATHON/php_template/loginHtml.php\">
+                <a href=\"../HACKATHON/php_template/loginHtml.php\">
                 <input type=\"button\" value=\"Login\">
                 </a>";
                 } ?>
@@ -46,7 +38,7 @@
         </right>
     </header>
     <burger-menu id="burger-menu">
-        <a href="http://localhost/HACKATHON/php_template/home.php">
+        <a href="../HACKATHON/php_template/home.php">
             <div id="burger-link">
                 <p>Home</p>
             </div>
