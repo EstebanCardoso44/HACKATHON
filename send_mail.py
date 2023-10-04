@@ -55,8 +55,10 @@ def add_api():
               # Exit the inner loop if a match is found
         else:
            create_pivpn_user(name)
+            send_email(gmail_username, name, 'Accès VPN', 'Bonjour, votre fichier de configuration WireGuard se trouve en PJ de ce mail.')
+          
 
-def send_email(sender_email, recipient_email, subject, message, attachment_path=None):
+def send_email(sender_email, recipient_email, subject, message, attachment_path="/configs"):
     # Gmail SMTP
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587  # TLS port
@@ -75,7 +77,7 @@ def send_email(sender_email, recipient_email, subject, message, attachment_path=
 
     if attachment_path:
         with open(attachment_path, 'rb') as attachment:
-            part = MIMEApplication(attachment.read(), Name='attachment.pdf')
+        part = MIMEApplication(attachment.read(), Name=f"{recipient_email}.conf")
         part['Content-Disposition'] = 'attachment; filename={}'.format(attachment_path)
         msg.attach(part)
 
@@ -97,4 +99,3 @@ def send_email(sender_email, recipient_email, subject, message, attachment_path=
 #func
 gmail_username = 'hackathonynov@gmail.com'
 add_api()
-#send_email(gmail_username, 'esteban.cardoso@ynov.com', 'Sujet de votre email', 'Ceci est le message de votre email B==D')```
