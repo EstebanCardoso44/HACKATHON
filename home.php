@@ -7,10 +7,11 @@
  <div id="container">
  <form>
  <h1>Bienvenue sur le VPN d'Ynov !</h1>
- <p>Exsistit autem hoc loco quaedam quaestio subdifficilis, num quando amici novi, digni amicitia, veteribus sint anteponendi, ut equis vetulis teneros anteponere solemus. Indigna homine dubitatio! Non enim debent esse amicitiarum sicut aliarum rerum satietates; veterrima quaeque, ut ea vina, quae vetustatem ferunt, esse debet suavissima; verumque illud est, quod dicitur, multos modios salis simul edendos esse, ut amicitiae munus expletum sit.</p>
+ <p>YVP : acronyme de "Ynov Virtual Private Network", est un service de réseau privé virtuel spécialement conçu pour répondre aux besoins de l'école Ynov. Développé pour garantir la sécurité et la confidentialité optimale de tous les membres de la communauté Ynov, comme les étudiants, les enseignants, et le personnel administratif.</p>
+ <a href="http://localhost/HACKATHONr/php_template/loginhtml.php"> 
  <?php
  ?>
- </form>
+</form>
  </div>
  </body>
 </html>
