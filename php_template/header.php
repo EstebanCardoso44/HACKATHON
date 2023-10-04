@@ -12,7 +12,7 @@
         </left>
         <middle>
             <content>
-                <a href="../HACKATHON/php_template/home.php">
+                <a href="../php_template/home.php">
                     <img src="https://cdn-icons-png.flaticon.com/512/4685/4685215.png">
                 </a>
             </content>
@@ -27,10 +27,10 @@
              </user>";
                 } else {
                     echo "
-                <a href=\"../HACKATHON/php_template/RegisterHtml.php\">
+                <a href=\"../php_template/RegisterHtml.php\">
                 <input type=\"button\" value=\"Sign up\">
                 </a>
-                <a href=\"../HACKATHON/php_template/loginHtml.php\">
+                <a href=\"../php_template/loginHtml.php\">
                 <input type=\"button\" value=\"Login\">
                 </a>";
                 } ?>
@@ -38,7 +38,7 @@
         </right>
     </header>
     <burger-menu id="burger-menu">
-        <a href="../HACKATHON/php_template/home.php">
+        <a href="../php_template/home.php">
             <div id="burger-link">
                 <p>Home</p>
             </div>
