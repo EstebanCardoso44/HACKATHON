@@ -11,7 +11,7 @@ class DBHandler
     {
         $this->name = 'hackathon';
         $this->user = 'root';
-        $this->password = '';
+        $this->password = 'root';
         $this->host = 'localhost';
     }
 
