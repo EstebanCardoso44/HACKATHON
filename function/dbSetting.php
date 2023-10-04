@@ -9,9 +9,9 @@ class DBHandler
 
     function __construct()
     {
-        $this->name = 'hackathon';
-        $this->user = 'root';
-        $this->password = '';
+        $this->name = 'id21350906_hackathon';
+        $this->user = 'id21350906_root';
+        $this->password = 'root49*A';
         $this->host = 'localhost';
     }
 
