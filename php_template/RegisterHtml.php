@@ -30,7 +30,7 @@ include "header.php";
 				</label>
 				<input class="login-register-input" type="email" name="email" placeholder="Email" id="email" required>
 				<input class="login-register-input" type="submit" value="Register" class="button">
-				<input class="login-register-input" type="button" value="Login" onclick="window.location.href='loginhtml.php'" class="button">
+				<input class="login-register-input" type="button" value="Login" onclick="window.location.href='loginHtml.php'" class="button">
 				<?php
 				if (isset($_GET['erreur'])) {
 					$err = $_GET['erreur'];
@@ -41,7 +41,7 @@ include "header.php";
 					} elseif ($err == 3) {
 						echo "<h1 style='color:white'>Username is not valid</h1>";
 					} elseif ($err == 4) {
-						echo "<h1 style='color:white'>Username already exists</h1>";
+						echo "<h1 style='color:white'>email already exists</h1>";
 					}
 				}
 				?>

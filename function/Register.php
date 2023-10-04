@@ -41,8 +41,8 @@ class Users
 			"email" => $this->email,
 			"confirmkey" => $this->key
 		);
-		$this->db->getFromDbByParam("users", "name", $this->name); 
-		if ($this->db->getFromDbByParam("users", "name", $this->name) != null) {// Check if the username is already taken
+		$this->db->getFromDbByParam("users", "email", $this->email); 
+		if ($this->db->getFromDbByParam("users", "email", $this->email) != null) {// Check if the username is already taken
 			header('Location: ../php_template/RegisterHtml.php?erreur=4');
 			exit();
 		} else {

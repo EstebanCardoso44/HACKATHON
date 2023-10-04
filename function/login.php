@@ -1,5 +1,6 @@
 <?php
 require_once 'dbSetting.php';
+session_start();
 if (isset($_POST['username']) && isset($_POST['password'])) {
   $re = new Login(); // Create a new Login object
   $re->login(); // Call the login function
@@ -22,10 +23,10 @@ Class Login
         $password = $this->db->SecurityCheck($this->con, $_POST['password']);
         if ($this->db->getConfimeWithName("users", $username)) { // If the user is confirmed
           if ($username !== "" && $password !== "") {
+
             $reponse = $this->db->getPasswordWithName("users", $username); // Get the password of the user
             $hash = $reponse; // Set the hash variable
             if (password_verify($password, $hash)) { // Verify if the password is the same as the hash
-              $_SESSION['userID'] = $this->db->getIDwithName('Users', $username); // Set the session userID variable
               $_SESSION['username'] = $username;// Set the session username variable
               $_SESSION['email'] = $this->db->getEmailwithName("users",$username);// Set the session email variable
              
