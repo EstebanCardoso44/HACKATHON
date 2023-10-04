@@ -14,6 +14,7 @@ body {
   animation-duration: 25s;
   animation-iteration-count: infinite;
   animation-direction: linear;
+  position: relative;
 }
 .login-register-form {
   width: 500px;
@@ -274,4 +275,35 @@ right-container form {
   background: #fff;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
  }
+ .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000; 
+  color: #fff; 
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px; 
+}
+.alert-container {
+  position: absolute; 
+  margin-top: 50px;
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 200px; 
+  height: 45px; 
+  background-color: red;
+  border: 2px solid;
+  border-radius: 10px;
+  text-align: center; 
+  z-index: 1; 
+}
+.alert-message {
+  color: #fff; 
+  padding: 10px; 
+  font-weight: bold; 
+}
 
