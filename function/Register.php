@@ -57,17 +57,21 @@ class Users
 			"name" => $this->name,
 			"password" => $this->password,
 			"email" => $this->email,
+			"verif" => 0,
 			"confirmkey" => $this->key,
 			"role" => $this->role
 		);
 		$this->db->getFromDbByParam("users", "email", $this->email); 
-		if ($this->db->getFromDbByParam("users", "email", $this->email) != null) {// Check if the username is already taken
+		if ($this->db->getFromDbByParam("users", "email", $this->email) != null && $this->db->getFromDbByParam("users", "name", $this->name) != null ) {// Check if the username is already taken
 			header('Location: ../php_template/RegisterHtml.php?erreur=4');
 			exit();
 		} else {
-			$this->db->insert($data, 'users'); // Insert the data into the database
+			try{
+				$this->db->insert($data, 'users'); // Insert the data into the database
 			SendMail($this->email, $this->key, $this->name); // Call the SendMail function
-			header('Location: ../php_template/loginHtml.php');
+			}catch(Exception $e){
+				header('Location: ../php_template/RegisterHtml.php?erreur=4');
+			}
 			exit();
 		}
 	}
@@ -98,7 +102,7 @@ function VerifyEnteredData($username, $password, $email,$role)
 	function SendMail($email,$key,$username){ // Send a mail to the user
 		$mail = new PHPMailer;
 		$mail->isSMTP(); 
-		$mail->SMTPDebug = 2; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
+		$mail->SMTPDebug = 0; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
 		$mail->Host = "smtp.gmail.com"; // use $mail->Host = gethostbyname('smtp.gmail.com'); // if your network does not support SMTP over IPv6
 		$mail->Port = 587; // TLS only
 		$mail->SMTPSecure = 'tls'; // ssl is deprecated

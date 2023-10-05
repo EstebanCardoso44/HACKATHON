@@ -45,7 +45,7 @@ include "header.php";
 					} elseif ($err == 3) {
 						echo "<h1 style='color:white'>Username is not valid</h1>";
 					} elseif ($err == 4) {
-						echo "<h1 style='color:white'>email already exists</h1>";
+						echo "<h1 style='color:white'>email or Username already exists</h1>";
 					}elseif ($err == 5) {
 						echo "<h1 style='color:white'>Role is not valid (only numbers)</h1>";
 					}elseif ($err == 6) {

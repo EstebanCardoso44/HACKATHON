@@ -32,7 +32,6 @@ class DBHandler
         $sql = "INSERT INTO $table (" . implode(',', $columns) . ") VALUES (\"" . implode("\", \"", $values) . "\" )";
         if ($stmt = $con->prepare($sql)) {
             $stmt->execute();
-            echo 'successfully inserted : ' . $sql;
         } else {
             echo "there has been an issue with : " . $sql . " " . mysqli_error($con);
         }

@@ -18,10 +18,12 @@ class Confirm {
             if ($userexist != null) {
                 $user = $requser->fetch();
                 if ($user['verif'] == 0) {
-                    
-                    $updateUser = $con->prepare("UPDATE users SET verif = 1 WHERE name = ? AND confirmkey = ?");
+                    try{
+                        $updateUser = $con->prepare("UPDATE users SET verif = 1 WHERE name = ? AND confirmkey = ?");
                     $updateUser->execute(array($username, $key));
-                    header('Location: ../php_template/loginHtml.php');
+                    }catch(Exception $e){
+                        header('Location: ../php_template/loginHtml.php');
+                    }
                     exit();
                 
                 } else {
