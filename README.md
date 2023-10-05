@@ -32,14 +32,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This hackathon project involves developing a graphical interface for creating a VPN account. The interface allows users to easily set up a VPN connection, specifying IP whitelist configurations to connect to an LDAP server and access designated resources.
-
-Specifications:
-
--Website to create Vpn access account
--Secured Vpn Tunnel
--Use of LDAP protocol 
--Ressources access from whithlist IP only
+This hackathon project involves developing a graphical interface to create VPN accounts. The interface allows users to easily set up a VPN connection, specifying IP whitelist configurations to connect and access designated resources.
 
 
 
@@ -49,7 +42,12 @@ Specifications:
 
 ### Built With
 * [PHP](https://www.php.net/)
+* [Python](https://www.python.org/)
 * [XAMPP](https://www.apachefriends.org/fr/index.html)
+* [APACHE2](https://httpd.apache.org/)
+* [PIVPN](https://www.pivpn.io/)
+* [WIREGUARD](https://www.wireguard.com/)
+
 * [MySQL](https://www.mysql.com/fr/)
 * [HTML5](https://html.spec.whatwg.org/multipage/)
 * [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -63,41 +61,26 @@ Specifications:
 
 ### Prerequisites
 
-You need to install PHP and XAMPP :
-<br>
-https://www.php.net/manual/fr/install.php
-https://www.mamp.info/en/downloads/
+Download WireGuard on PC/Smartphone
 
 ### Installation
 
-1. Clone the repo
+1. Connection
    ```
-   https://github.com/VincentTjw/HabitEnforcer
+   Register on : https://ypn666.000webhostapp.com/HACKATHON/php_template/home.php
    ```
-2. 
+2. Mail
    ```
-   Put the files in :
-   C:\MAMP\htdocs\
+   Check ur email and download the attachement config file.
    ```
-3. 
+3. WireGuard
    ```
-   Put the database in :
-   C:\MAMP\db\mysql
+   Upload the config file on WireGuard
    ```
-4. 
+4. Congrats !
    ```
-    Open Config.php in the project and change the database name , user and password
+    You can now activate ur VPN connection and acces whitelist ressources.
    ```
-5. 
-   ```
-    Open MAMP and start the server and the database
-   ```
-5. 
-   ```
-    Open your browser and go to :
-    http://localhost:8888/HabitEnforcer/log.php
-   ```
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -111,8 +94,13 @@ https://www.mamp.info/en/downloads/
 - [x] Session management
 - [x] SSL Certificate
 - [x] Full Responsive Website
-- [x] VPN
-- [x] LDAP Auth
+- [x] Raspberry config
+- [x] Remote SSH acces 
+- [x] PIPVN/WireGuard config
+- [x] Automation User Creation
+- [x] Mail_sending Script 
+- [x] SMTP GMAIL
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -142,6 +130,6 @@ Project Link: [https://github.com/EstebanCardoso44/HACKATHON.git](https://github
 ## Acknowledgments
 * [SQL Injection](https://www.php.net/manual/fr/security.database.sql-injection.php)
 * [HTML Injection](https://riptutorial.com/php/example/11883/cross-site-scripting--xss-)
-* [require PHP](https://www.php.net/manual/fr/function.require.php)
+* [Require PHP](https://www.php.net/manual/fr/function.require.php)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
