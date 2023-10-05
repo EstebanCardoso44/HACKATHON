@@ -44,6 +44,10 @@ This hackathon project involves developing a graphical interface to create VPN a
 * [PHP](https://www.php.net/)
 * [Python](https://www.python.org/)
 * [XAMPP](https://www.apachefriends.org/fr/index.html)
+* [APACHE2](https://httpd.apache.org/)
+* [PIVPN](https://www.pivpn.io/)
+* [WIREGUARD](https://www.wireguard.com/)
+
 * [MySQL](https://www.mysql.com/fr/)
 * [HTML5](https://html.spec.whatwg.org/multipage/)
 * [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -63,7 +67,7 @@ Download WireGuard on PC/Smartphone
 
 1. Connection
    ```
-   Register on : url site.
+   Register on : https://ypn666.000webhostapp.com/HACKATHON/php_template/home.php
    ```
 2. Mail
    ```
