@@ -138,7 +138,7 @@ class DBHandler
             die("Can't prepare the sql request properly : " . $sql . " " . mysqli_error($con));
         }
         mysqli_close($con);
-        return $resultQuerry->fetch_assoc()['email'];
+        return $resultQuerry->fetch_assoc()['Email'];
     }
     public function Haiku (){
          $dansLeReseau = true;
