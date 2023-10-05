@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);  // Turn off all error reporting
+ini_set('display_errors', 0);  // Don't display errors to the user
 require_once 'dbSetting.php';
 $re = new Confirm;
 $re->confirm();
@@ -18,13 +20,10 @@ class Confirm {
             if ($userexist != null) {
                 $user = $requser->fetch();
                 if ($user['verif'] == 0) {
-                    try{
                         $updateUser = $con->prepare("UPDATE users SET verif = 1 WHERE name = ? AND confirmkey = ?");
                     $updateUser->execute(array($username, $key));
-                    }catch(Exception $e){
                         header('Location: ../php_template/loginHtml.php');
-                    }
-                    exit();
+                        exit();
                 
                 } else {
                     echo "Votre compte a déjà été confirmé !";

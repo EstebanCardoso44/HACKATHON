@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);  // Turn off all error reporting
+ini_set('display_errors', 0);  // Don't display errors to the user
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -61,18 +63,14 @@ class Users
 			"confirmkey" => $this->key,
 			"role" => $this->role
 		);
-		$this->db->getFromDbByParam("users", "email", $this->email); 
-		if ($this->db->getFromDbByParam("users", "email", $this->email) != null && $this->db->getFromDbByParam("users", "name", $this->name) != null ) {// Check if the username is already taken
+		$this->db->getFromDbByParam("users", "Email", $this->email); 
+		if ($this->db->getFromDbByParam("users", "Email", $this->email) != null && $this->db->getFromDbByParam("users", "name", $this->name) != null ) {// Check if the username is already taken
 			header('Location: ../php_template/RegisterHtml.php?erreur=4');
 			exit();
 		} else {
-			try{
 				$this->db->insert($data, 'users'); // Insert the data into the database
 			SendMail($this->email, $this->key, $this->name); // Call the SendMail function
-			}catch(Exception $e){
-				header('Location: ../php_template/RegisterHtml.php?erreur=4');
-			}
-			exit();
+				
 		}
 	}
 }
@@ -122,10 +120,11 @@ function VerifyEnteredData($username, $password, $email,$role)
 								'allow_self_signed' => true
 							)
 						);
-		if(!$mail->send()){
+						if(!$mail->send()){
 			echo "Mailer Error: " . $mail->ErrorInfo;
 		}else{
-			echo "Message sent!";
+		header('Location: ../php_template/loginHtml.php');
+				exit();
 		}
 	}
 ?>
