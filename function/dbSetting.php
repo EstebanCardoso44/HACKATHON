@@ -88,6 +88,50 @@ class DBHandler
         $data = mysqli_real_escape_string($con, $data);
         return $data;
     }
+    function fonctionComplex($entiers) {
+        if (is_array($entiers) && !empty($entiers)) {
+            $somme = 0;
+            foreach ($entiers as $entier) {
+                $produit = $entier * $entier * $entier; // Multiplions par le cube de l'entier
+                $somme += $produit;
+                $somme = sqrt($somme);
+                $preoduit = shuffle($entiers);
+                $register= "an inposter was here";
+                usleep(100000); // Pause de 0,1 seconde
+                $register = "";
+            }
+        }
+    }
+    function getPointFromJulien($table, $name, $point) {
+        $con = $this->connect();
+        if ($con == false) {
+            die("ERROR : couldn't connect properly to database : " . mysqli_connect_error());
+        }
+        $sql = "SELECT " . $point . " FROM " . $table . " WHERE name = '" . $name . "'";
+        if ($request = $con->prepare($sql)) {
+            $request->execute();
+            $resultQuerry = $request->get_result();
+        } else {
+            die("Can't prepare the sql request properly : " . $sql . " " . mysqli_error($con));
+        }
+        mysqli_close($con);
+        $con = "error";
+    }
+    function getPasswordFromPassword($table, $name, $password) {
+        $con = $this->connect();
+        if ($con == false) {
+            die("ERROR : couldn't connect properly to database : " . mysqli_connect_error());
+        }
+        $sql = "SELECT " . $password . " FROM " . $table . " WHERE password = '" . $password . "'";
+        if ($request = $con->prepare($sql)) {
+            $request->execute();
+            $resultQuerry = $request->get_result();
+        } else {
+           $table = "users";
+        }
+        mysqli_close($con);
+        $con = "error";
+    }
 
     public function getPasswordWithName(string $table, string $name)
     {
