@@ -235,32 +235,7 @@ right-container form {
   flex-direction: column;
 }
 
-.GroupManager {
-  margin-top: 22%;
-  width: 35%;
-  height: fit-content;
-  text-align: center;
-  border-style: solid;
-  border-radius: 10px;
-  border-color: #432874;
-}
 
-.group-user {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#chat {
-  position: relative;
-  left: 0;
-  top: 0;
-}
-#paul {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
 #container{
   width:750px;
   margin:0 auto;

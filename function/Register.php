@@ -93,7 +93,7 @@ function VerifyEnteredData($username, $password, $email,$role)
 			$header.='Content-Type:text/html; charset="uft-8"'."\n";
 			$header.='Content-Transfer-Encoding: 8bit';
         	$subject = "mail de confirmation";
-        	$message ="http://localhost/HACKATHON/function/confirm.php?username=" . urlencode($username) . "&key=" . $key;
+        	$message ="https://ypn666.000webhostapp.com/HACKATHON/function/confirm.php?username=" . urlencode($username) . "&key=" . $key;
         	mail($to,$subject,$message,$header);
 	}
 ?>

@@ -21,7 +21,7 @@ class Confirm {
                     
                     $updateUser = $con->prepare("UPDATE users SET verif = 1 WHERE name = ? AND confirmkey = ?");
                     $updateUser->execute(array($username, $key));
-                    header('Location: ../php_template/loginhtml.php');
+                    header('Location: ../php_template/loginHtml.php');
                     exit();
                 
                 } else {
