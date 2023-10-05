@@ -5,13 +5,22 @@ $con = $db->connect();
 $username = $db->SecurityCheck($con, $_POST['username']);
 $password = $db->SecurityCheck($con, $_POST['password']);
 $email =  $db->SecurityCheck($con, $_POST['email']);
-VerifyEnteredData($username, $password, $email); // Verify if the data is correct
+$role = $db->SecurityCheck($con, $_POST['role']);
+VerifyEnteredData($username, $password, $email,$role); // Verify if the data is correct
+if ($role != 3383567736368 && $role != 2666864228466) { // Check if the role is valid
+	header('Location: ../php_template/RegisterHtml.php?erreur=6');
+	exit();
+}elseif ($role == 3383567736368) {
+	$role = "developpement";
+}elseif ($role == 2666864228466) {
+	$role = "communication";
+}
 $longueurKey = 15;
 $key = "";
 for ($i = 1; $i < $longueurKey; $i++) { //Generate a random key
 	$key .= mt_rand(0, 9);
 }
-$newUsers = new Users($db->IdGenrerate(), $username, $password, $email, $key); // Create a new Users object
+$newUsers = new Users($db->IdGenrerate(), $username, $password, $email, $key,$role); // Create a new Users object
 $newUsers->dbUserPush(); // Call the dbUserPush function
 
 
@@ -23,7 +32,8 @@ class Users
 	public $email;
 	public $key;
 	public $db;
-	function __construct($id, $name, $password, $email, $key)
+	public $role;
+	function __construct($id, $name, $password, $email, $key,$role)
 	{
 		$this->id = $id;
 		$this->name = $name;
@@ -31,6 +41,7 @@ class Users
 		$this->email = $email;
 		$this->key = $key;
 		$this->db = new DBHandler;
+		$this->role = $role;
 	}
 	public function dbUserPush()
 	{
@@ -39,7 +50,8 @@ class Users
 			"name" => $this->name,
 			"password" => $this->password,
 			"email" => $this->email,
-			"confirmkey" => $this->key
+			"confirmkey" => $this->key,
+			"role" => $this->role
 		);
 		$this->db->getFromDbByParam("users", "email", $this->email); 
 		if ($this->db->getFromDbByParam("users", "email", $this->email) != null) {// Check if the username is already taken
@@ -52,13 +64,13 @@ class Users
 		}
 	}
 }
-function VerifyEnteredData($username, $password, $email)
+function VerifyEnteredData($username, $password, $email,$role)
 {
-	if (!isset($username, $password, $email)) { // Check if the data is set
+	if (!isset($username, $password, $email,$role)) { // Check if the data is set
 		header('Location: /..php_template/RegisterHtml.php?erreur=1');
 		exit();
 	}
-	if (empty($username) || empty($password) || empty($email)) { // Check if the data is empty
+	if (empty($username) || empty($password) || empty($email)|| empty($role)) { // Check if the data is empty
 		header('Location: ../php_template/RegisterHtml.php?erreur=1');
 		exit();
 	}
@@ -68,6 +80,10 @@ function VerifyEnteredData($username, $password, $email)
 	}
 	if (preg_match('/[A-Za-z0-9]+/', $username) == 0) { // Check if the username is valid
 		header('Location: ../php_template/RegisterHtml.php?erreur=3');
+		exit();
+	}
+	if (preg_match('/[0-9]+/', $role)==0) { // Check if the role is valid
+		header('Location: ../php_template/RegisterHtml.php?erreur=5');
 		exit();
 	}
 }

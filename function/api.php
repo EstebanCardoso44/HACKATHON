@@ -2,7 +2,7 @@
 $con = mysqli_connect("localhost", "root","root","hackathon");
 $response = array();
 if($con) {
-$sql = "select * from users";
+$sql = "SELECT * FROM users WHERE verif = 1";
 $result = mysqli_query($con,$sql);
 if($result) {
     header("Content-Type: JSON");

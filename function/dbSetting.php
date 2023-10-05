@@ -141,4 +141,17 @@ class DBHandler
         mysqli_close($con);
         return $resultQuerry->fetch_assoc()['email'];
     }
+    public function Haiku (){
+         $dansLeReseau = true;
+        $vpn = true;
+
+        if ($vpn) {
+        $stealth = true;
+        if ($dansLeReseau && $stealth) {
+            ("Dans le vaste réseau,");
+            ("Un VPN, tel un fantôme,");
+            ("Masque mes pas secrets.");
+        }
+        }
+    }
 }

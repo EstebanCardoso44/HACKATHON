@@ -15,7 +15,7 @@ include "header.php";
 <body>
 	<div class="login-register-container">
 		<section>
-			<form action="../function/register.php" method="post" autocomplete="off" class="login-register-form">
+			<form action="../function/Register.php" method="post" autocomplete="off" class="login-register-form">
 				<h1>Register</h1>
 				<label for="username">
 					<i class="user"></i>
@@ -29,6 +29,10 @@ include "header.php";
 					<i class="mail"></i>
 				</label>
 				<input class="login-register-input" type="email" name="email" placeholder="Email" id="email" required>
+				<label for="role">
+					<i class="role"></i>
+				</label>
+				<input class="login-register-input" type="text" name="role" placeholder="Role" id="role" required>
 				<input class="login-register-input" type="submit" value="Register" class="button">
 				<input class="login-register-input" type="button" value="Login" onclick="window.location.href='loginHtml.php'" class="button">
 				<?php
@@ -42,6 +46,10 @@ include "header.php";
 						echo "<h1 style='color:white'>Username is not valid</h1>";
 					} elseif ($err == 4) {
 						echo "<h1 style='color:white'>email already exists</h1>";
+					}elseif ($err == 5) {
+						echo "<h1 style='color:white'>Role is not valid (only numbers)</h1>";
+					}elseif ($err == 6) {
+						echo "<h1 style='color:white'>role incorrect</h1>";
 					}
 				}
 				?>
