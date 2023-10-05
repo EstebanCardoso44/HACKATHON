@@ -61,6 +61,7 @@ class Users
 			$this->db->insert($data, 'users'); // Insert the data into the database
 			SendMail($this->email, $this->key, $this->name); // Call the SendMail function
 			header('Location: ../php_template/loginHtml.php');
+			exit();
 		}
 	}
 }
